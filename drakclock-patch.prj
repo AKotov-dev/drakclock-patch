@@ -51,10 +51,6 @@ deb=0
 2=[[ -f /etc/chrony.conf ]] && sed -i 's/^pool.*/server iburst/g' /etc/chrony.conf
 3=[[ -f /etc/ntp.conf ]] && sed -i 's/^pool.*/server iburst/g' /etc/ntp.conf
 
-[AFTERREMOVE]
-0=[[ -f /etc/chrony.conf ]] && sed -i 's/^server iburst/pool pool.ntp.org iburst/g' /etc/chrony.conf
-1=[[ -f /etc/ntp.conf ]] && sed -i 's/^server iburst/pool 2.fedora.pool.ntp.org iburst/g' /etc/ntp.conf
-
 [URL32]
 url32=
 
