@@ -1,0 +1,71 @@
+[NAME]
+name=drakclock-patch
+
+[VERSION]
+version=0.1
+
+[RELEASE]
+release=0.mrx8
+
+[GROUP]
+group=Applications/File
+
+[DESCRIPTION]
+0=patch for drakclock (Mageia-7/8)
+1=---
+2=More information: /usr/share/doc/package_name/repack.txt
+
+[MAINTAINER]
+maintainer=Alex Kotov
+
+[VENDOR]
+vendor=alex_q_2000 (C) 2021
+
+[SUMMARY]
+summary=patch for drakclock (Mageia-7/8)
+
+[URLCOPY]
+urlcopy=111
+
+[LICENSE]
+license=GPLv3
+
+[DEPS]
+deps=
+
+[META]
+meta=1
+
+[NOARCH]
+noarch=1
+
+[SIGN]
+sign=0
+
+[DEB]
+deb=0
+
+[AFTERINSTALL]
+0=systemctl stop chronyd ntpd
+1=systemctl disable chronyd ntpd
+2=[[ -f /etc/chrony.conf ]] && sed -i 's/^pool.*/server iburst/g' /etc/chrony.conf
+3=[[ -f /etc/ntp.conf ]] && sed -i 's/^pool.*/server iburst/g' /etc/ntp.conf
+
+[AFTERREMOVE]
+0=[[ -f /etc/chrony.conf ]] && sed -i 's/^server iburst/pool pool.ntp.org iburst/g' /etc/chrony.conf
+1=[[ -f /etc/ntp.conf ]] && sed -i 's/^server iburst/pool 2.fedora.pool.ntp.org iburst/g' /etc/ntp.conf
+
+[URL32]
+url32=
+
+[URL64]
+url64=
+
+[PROGRAMNAME]
+programname=
+
+[DEVTOOL]
+devtool=
+
+[TOOLVERSION]
+toolversion=
