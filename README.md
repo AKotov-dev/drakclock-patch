@@ -1,2 +1,19 @@
 # drakclock-patch
-Patch for drakclock (Mageia-7/8)
+Mageia-7/8 has a bug (27195) that does not allow you to set and apply automatic time synchronization via `NTP` (Mageia Control Center, drakclock). The rpm package located here fixes this problem. After installation, the following commands are executed automatically (%post):
+```
+systemctl stop chronyd ntpd
+systemctl disable chronyd ntpd
+
+[ -f /etc/chrony.conf ] && sed -i 's/^pool.*/server iburst/g' /etc/chrony.conf
+[ -f /etc/ntp.conf ] && sed -i 's/^pool.*/server iburst/g' /etc/ntp.conf
+```
+
+...and appropriate changes are made to the files: `/etc/chrony.conf` and `/etc/ntp.conf` if available.
+
+Similarly, instead of installing this patch package, you can make changes manually:
+```
+su/password
+systemctl stop chronyd ntpd; systemctl disable chronyd ntpd
+sed -i 's/^pool.*/server iburst/g' {/etc/ntp.conf,/etc/chrony.conf}
+```
+![](https://github.com/AKotov-dev/drakclock-patch/blob/main/ScreenShot.png)
