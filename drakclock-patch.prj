@@ -11,7 +11,7 @@ release=0.mrx8
 group=Applications/File
 
 [DESCRIPTION]
-0=patch for drakclock (Mageia-7/8)
+0=Patch for drakclock (Mageia-7/8)
 1=---
 2=More information: /usr/share/doc/package_name/repack.txt
 
@@ -22,10 +22,10 @@ maintainer=Alex Kotov
 vendor=alex_q_2000 (C) 2021
 
 [SUMMARY]
-summary=patch for drakclock (Mageia-7/8)
+summary=Patch for drakclock (Mageia-7/8)
 
 [URLCOPY]
-urlcopy=111
+urlcopy=https://github.com/AKotov-dev/drakclock-patch
 
 [LICENSE]
 license=GPLv3
