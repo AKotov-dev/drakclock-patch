@@ -18,4 +18,13 @@ sed -i 's/^pool.*/server iburst/g' {/etc/ntp.conf,/etc/chrony.conf}
 ```
 **Note:** All actions must be applied to unmodified, original configuration files `/etc/ntp.conf` and `/etc/chrony.conf`.
 
+If the files `/etc/ntp.conf` and `/etc/crony.conf` already changed manually:
+```
+su/password
+systemctl stop ntpd cronyd; systemctl disable ntpd cronyd
+wget https://github.com/AKotov-dev/drakclock-patch/raw/main/ntp.conf_and_chrony.conf_corrected.tar.gz
+tar -C "/" -xzvf ntp.conf_and_chrony.conf_corrected.tar.gz
+drakclock
+``` 
+
 ![](https://github.com/AKotov-dev/drakclock-patch/blob/main/ScreenShot.png)
