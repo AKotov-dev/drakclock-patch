@@ -24,7 +24,6 @@ su/password
 systemctl stop ntpd cronyd; systemctl disable ntpd cronyd
 wget https://github.com/AKotov-dev/drakclock-patch/raw/main/ntp.conf_and_chrony.conf_corrected.tar.gz
 tar -C "/" -xzvf ntp.conf_and_chrony.conf_corrected.tar.gz
-drakclock
 ``` 
 
 ![](https://github.com/AKotov-dev/drakclock-patch/blob/main/ScreenShot.png)
