@@ -18,7 +18,7 @@ sed -i 's/^pool.*/server iburst/g' {/etc/ntp.conf,/etc/chrony.conf}
 ```
 **Note:** All actions must be applied to unmodified, original configuration files `/etc/ntp.conf` and `/etc/chrony.conf`.
 
-If the files `/etc/ntp.conf` and `/etc/crony.conf` already changed manually:
+If the files `/etc/ntp.conf` and `/etc/chrony.conf` already changed manually:
 ```
 su/password
 systemctl stop ntpd cronyd; systemctl disable ntpd cronyd
