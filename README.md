@@ -16,4 +16,6 @@ su/password
 systemctl stop chronyd ntpd; systemctl disable chronyd ntpd
 sed -i 's/^pool.*/server iburst/g' {/etc/ntp.conf,/etc/chrony.conf}
 ```
+**Note:** All actions must be applied to unmodified, original configuration files `/etc/ntp.conf` and `/etc/chrony.conf`.
+
 ![](https://github.com/AKotov-dev/drakclock-patch/blob/main/ScreenShot.png)
