@@ -2,7 +2,7 @@
 name=drakclock-patch
 
 [VERSION]
-version=0.1
+version=0.2
 
 [RELEASE]
 release=0.mrx8
@@ -34,7 +34,7 @@ license=GPLv3
 deps=
 
 [META]
-meta=1
+meta=0
 
 [NOARCH]
 noarch=1
@@ -45,11 +45,15 @@ sign=0
 [DEB]
 deb=0
 
+[FILES]
+0=/usr/libexec/drakclock.patch
+
 [AFTERINSTALL]
 0=systemctl stop chronyd ntpd
 1=systemctl disable chronyd ntpd
 2=[[ -f /etc/chrony.conf ]] && sed -i 's/^pool.*/server iburst/g' /etc/chrony.conf
 3=[[ -f /etc/ntp.conf ]] && sed -i 's/^pool.*/server iburst/g' /etc/ntp.conf
+4=cd /usr/libexec; patch -Ni drakclock.patch
 
 [URL32]
 url32=
