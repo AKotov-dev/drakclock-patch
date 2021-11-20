@@ -23,7 +23,7 @@ If the files `/etc/ntp.conf` and `/etc/chrony.conf` already changed manually:
 su/password
 systemctl stop ntpd cronyd; systemctl disable ntpd cronyd
 wget https://github.com/AKotov-dev/drakclock-patch/raw/main/ntp.conf_and_chrony.conf_corrected.tar.gz
-tar -C "/" -xzvf ntp.conf_and_chrony.conf_corrected.tar.gz
+#...and overwrite the necessary files from the archive
 ``` 
 
 ![](https://github.com/AKotov-dev/drakclock-patch/blob/main/ScreenShot.png)
