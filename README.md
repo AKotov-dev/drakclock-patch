@@ -10,7 +10,7 @@ systemctl disable chronyd ntpd
 cd /usr/libexec; patch -Ni drakclock.patch
 ```
 
-...and appropriate changes are made to the files: `/etc/chrony.conf` and `/etc/ntp.conf` if available.
+...and appropriate changes are made to the files: `/etc/chrony.conf` and `/etc/ntp.conf` if available + applies the `drakclock.patch`.
 
 Similarly, instead of installing this patch package, you can make changes manually:
 ```
