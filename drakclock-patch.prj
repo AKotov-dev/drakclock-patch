@@ -31,7 +31,7 @@ urlcopy=https://github.com/AKotov-dev/drakclock-patch
 license=GPLv3
 
 [DEPS]
-deps=
+deps=chrony
 
 [META]
 meta=0
