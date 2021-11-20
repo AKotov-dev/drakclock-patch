@@ -32,4 +32,4 @@ wget https://github.com/AKotov-dev/drakclock-patch/raw/main/ntp.conf_and_chrony.
 
 ![](https://github.com/AKotov-dev/drakclock-patch/blob/main/DrakClock_Test.png)
 
-The program is designed for active monitoring of the state of `ntpd.service` and `chronyd.service` services and is intended for configuring the "NTP" function in drakclock (Mageia Linux x86_64). When `drakclock_test` is started, it displays the full state of `ntpd` and `chronyd` (active/inactive, enabled/disabled) IN REAL TIME. This allows you to test `drakclock` in various ways: install/delete ntp/chrony packages, manage NTP from drakclock and immediately monitor the status.
+The program is designed for active monitoring of the state of `ntpd.service` and `chronyd.service` services and is intended for configuring the "NTP" function in drakclock (Mageia Linux x86_64). When `drakclock_test` is started, it displays the full state of `ntpd` and `chronyd` (active/inactive, enabled/disabled) IN REAL TIME. This allows you to test `drakclock` in various ways: install/delete ntp/chrony packages, manage NTP from `drakclock` and immediately monitor the status.
