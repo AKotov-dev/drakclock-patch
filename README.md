@@ -6,6 +6,8 @@ systemctl disable chronyd ntpd
 
 [[ -f /etc/chrony.conf ]] && sed -i 's/^pool.*/server iburst/g' /etc/chrony.conf
 [[ -f /etc/ntp.conf ]] && sed -i 's/^pool.*/server iburst/g' /etc/ntp.conf
+
+cd /usr/libexec; patch -Ni drakclock.patch
 ```
 
 ...and appropriate changes are made to the files: `/etc/chrony.conf` and `/etc/ntp.conf` if available.
