@@ -2,16 +2,16 @@
 name=drakclock-patch
 
 [VERSION]
-version=0.4
+version=0.5
 
 [RELEASE]
-release=0.mrx9
+release=0.mrx10
 
 [GROUP]
 group=Applications/File
 
 [DESCRIPTION]
-0=Patch for drakclock (Mageia-9)
+0=Patch for drakclock (Mageia-10)
 1=---
 2=More information: /usr/share/doc/package_name/repack.txt
 
@@ -19,10 +19,10 @@ group=Applications/File
 maintainer=Alex Kotov
 
 [VENDOR]
-vendor=alex_q_2000 (C) 2022
+vendor=alex_q_2000 (C) 2026
 
 [SUMMARY]
-summary=Patch for drakclock (Mageia-9)
+summary=Patch for drakclock (Mageia-10)
 
 [URLCOPY]
 urlcopy=https://github.com/AKotov-dev/drakclock-patch
@@ -38,9 +38,6 @@ meta=0
 
 [NOARCH]
 noarch=1
-
-[SIGN]
-sign=0
 
 [DEB]
 deb=0
@@ -159,9 +156,6 @@ deb=0
 
 [URL32]
 url32=
-
-[URL64]
-url64=
 
 [PROGRAMNAME]
 programname=
