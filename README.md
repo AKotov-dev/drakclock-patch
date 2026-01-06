@@ -1,4 +1,4 @@
-# drakclock-patch-0.X-0.mrx8.noarch.rpm
+# drakclock-patch
 ![](https://github.com/AKotov-dev/drakclock-patch/blob/main/ScreenShot.png)
 
 Mageia-8/9 has a bug (27195) that does not allow you to set and apply automatic time synchronization via `NTP` (Mageia Control Center, drakclock). The rpm package located here fixes this problem. After installation, the following commands are executed automatically (%post):
